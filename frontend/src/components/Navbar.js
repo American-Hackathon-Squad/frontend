@@ -5,6 +5,15 @@ import {logOut} from '../actions/auth'
 import Alert from './Alert';
 import PropTypes from 'prop-types';
 import logo from '../assets/image.png'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import AccountCircle from '@material-ui/icons/PersonOutline';
+import AccountCircleRounded from '@material-ui/icons/PersonRounded';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import {useStyles} from '../componentstyles/stylesheet'
+import Button from '@material-ui/core/Button'
+
+
 function Navbar({auth: {isAuthenticated, loading}, logOut}) {
     
     const authLinks = (
@@ -12,11 +21,18 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
             Logout
         </a>
     );
+    const handleHover = ()=> {
 
+    }
+    const classes = useStyles()
     const guestLinks = (
         <Fragment>
-            <Link className="navbar__top__auth__link" to='/login'>Login</Link>
-            <Link className="navbar__top__auth__link" to='/signup'>Sign Up</Link>
+            <Button variant="contained" className="navbar__top__auth__link" onMouseOver={handleHover('bottom-start', 'white')} onMouseLeave={handleHover('bottom-start')} aria-label="show Home tag" >
+                <AccountCircleRounded style = {{color: 'grey', backgroundColor: '#efefef',fontSize: 25, borderRadius: '50%'}}/> 
+                <Typography className={classes.title} noWrap>
+                <span>&nbsp;Sign In <ArrowDropDownIcon color ="inherit" fontSize="large" style={{display: 'inline'}}/></span>
+                </Typography> 
+            </Button>
         </Fragment>
     )
 
