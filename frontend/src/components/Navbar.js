@@ -19,6 +19,10 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import CloseIcon from '@material-ui/icons/Close';
+import Divider from '@material-ui/core/Divider';
+import PhoneIcon from '@material-ui/icons/Phone'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import GoogleIcon from '../assets/images/googleicon.svg'
 
 
 function Navbar({auth: {isAuthenticated, loading}, logOut}) {
@@ -68,46 +72,111 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
             To subscribe to this website, please enter your email address here. We will send updates
             occasionally.
           </DialogContentText>
-          <TextField className="text-3xl w-full"
-            InputLabelProps = {{
+          <div className="my-6">
+              <TextField className="text-2xl w-full"
+                InputLabelProps = {{
+                    style: {
+                        fontSize: '.7em',
+                        fontWeight: 'bold'
+                    }
+                }
+                }
+                InputProps = {{
+                    style: {
+                        fontSize: '.6em',
+                    }
+                }
+                }
+              id="outlined-password-input"
+              label="Email Address" 
+              type="email"
+              required
+              variant="outlined"
+                InputLabelProps = {{
+                    style: {
+                        fontSize: '.8em',
+                        color: "#000000",
+                        fontWeight: "bold"
+                    }
+                }
+                }
+                InputProps = {{
+                    style: {
+                        fontSize: '.8em',
+                        outlineColor: "green"
+                    },
+                    color: "secondary"
+                }
+                }
+            />
+          </div>
+        
+        <div className="my-6">
+            <TextField className="text-2xl w-full"
+              id="outlined-password-input"
+              label="Password"
+              type="password"
+              required
+              autoComplete="current-password"
+              variant="outlined"
+              InputLabelProps = {{
                 style: {
-                    fontSize: '.7em',
-                    fontWeight: 'bold'
+                    fontSize: '.8em',
+                    color: "#000000",
+                    fontWeight: "bold"
                 }
             }
             }
             InputProps = {{
                 style: {
-                    fontSize: '.6em',
-                }
+                    fontSize: '.8em',
+                    borderColor: "green"
+                },
+                color: "secondary"
             }
             }
-          id="outlined-password-input"
-          label="Email Address" 
-          type="email"
-          required
-          variant="outlined"
-            InputLabelProps = {{
-                style: {
-                    fontSize: '.7em'
-                }
-            }
-            }
-            InputProps = {{
-                style: {
-                    fontSize: '.6em',
-                }
-            }
-            }
-        />
-        <div className="space-y-10 my-10"></div>
-        <TextField className="text-3xl w-full"
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          variant="outlined"
-        />
+            />
+        </div>
+        <div className="form__enhancements flex flex-row justify-between">
+            <div>
+                <input type="checkbox" name='remember'
+                    checked={true}
+                    className="listingform__checkbox"/>
+                <label htmlFor="open_house" className="text-xl mb-6 text-gray-900 self-center">
+                    Remember me
+                </label>
+            </div>
+            <div>
+                <Link className="text-xl focus:text-blue-500">
+                    Forgot Password ?
+                </Link>
+            </div>
+        </div>
+        <div className="flex flex-row">
+            <Divider className="flex-grow self-center"/>
+            <div className="px-2">or</div>
+            <Divider className="flex-grow self-center"/>
+        </div>
+        <div className="flex flex-row justify-center">
+            <div>
+                <Button variant="outlined" className="listingform__button listingform__button--primary" >
+                        <PhoneIcon style = {{color: '#333', fontSize: 25}}/> 
+                        <Typography noWrap style = {{color: '#000'}}>Phone Number</Typography> 
+                </Button>
+            </div>
+            <div>
+                <Button variant="outlined" className="listingform__button listingform__button--primary" >
+                        <img  src={GoogleIcon} class="w-10 inline mr-4"/> 
+                        <Typography noWrap style = {{color: '#000'}}>Google</Typography> 
+                </Button>
+            </div>
+            <div>
+                <Button variant="outlined" className="listingform__button listingform__button--primary" >
+                        <FacebookIcon style = {{color: '#000', fontSize: 25}}/> 
+                        <Typography noWrap style = {{color: '#fff'}}>Facebook</Typography> 
+                </Button>
+            </div>
+        </div>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
