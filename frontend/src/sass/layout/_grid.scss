@@ -41,9 +41,9 @@
     @for $i from 1 to $total-length {
         
         .col-#{$i}-of-#{$total-length} {
-            width: calc(#{$i} * ((100%- (#{$total-length}-1) * #{$gutter-horizontal}) / #{$total-length})+ ((#{$i}-1) * #{$gutter-horizontal}));      
+            width: calc(#{$i}*((100% - ((#{$total-length} - 1) * #{$gutter-horizontal})) / #{$total-length}) + ((#{$i} - 1) * #{$gutter-horizontal}));      
         }
         }
-    }
-
+    }  
+   
 }

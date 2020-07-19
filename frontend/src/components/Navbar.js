@@ -26,7 +26,7 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
                 <div className='navbar__top'>
                     <div className="navbar__top__logo">
                         <Link className="navbar__top__logo__link" to="/">
-                            <img src={logo} alt=""/>
+                            <img src={logo} alt="" width="300px"/>
                         </Link>
                     </div>
                     <div className="navbar__top__auth">
