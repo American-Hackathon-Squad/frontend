@@ -31,7 +31,7 @@ function Signin({logIn, isAuthenticated }) {
     return (
         <div className="auth">
             <Helmet>
-                <title>Havenfound - LogIn</title>
+                <title>Realest Estate - LogIn</title>
                 <meta name='description' content='login page'/>
             </Helmet>
             <h1 className='auth__title'>Sign In</h1>

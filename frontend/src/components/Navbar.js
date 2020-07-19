@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {logOut} from '../actions/auth'
 import Alert from './Alert';
 import PropTypes from 'prop-types';
-
+import logo from '../assets/image.png'
 function Navbar({auth: {isAuthenticated, loading}, logOut}) {
     
     const authLinks = (
@@ -26,7 +26,7 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
                 <div className='navbar__top'>
                     <div className="navbar__top__logo">
                         <Link className="navbar__top__logo__link" to="/">
-                            Havenfound
+                            <img src={logo} alt=""/>
                         </Link>
                     </div>
                     <div className="navbar__top__auth">

@@ -36,7 +36,7 @@ function Signup({signUp, setAlert, isAuthenticated }) {
     return (
         <div className="auth">
             <Helmet>
-                <title>Havenfound - SignUp</title>
+                <title>Realest Estate - SignUp</title>
                 <meta name='description' content='signup page'/>
             </Helmet>
             <h1 className='auth__title'>Sign Up</h1>
