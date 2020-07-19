@@ -68,10 +68,6 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
           </div>
         </DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
-          </DialogContentText>
           <div className="my-6">
               <TextField className="text-2xl w-full"
                 InputLabelProps = {{
@@ -157,35 +153,30 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
             <div className="px-2">or</div>
             <Divider className="flex-grow self-center"/>
         </div>
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center space-x-10 my-4">
             <div>
-                <Button variant="outlined" className="listingform__button listingform__button--primary" >
+                <Button variant="outlined"  color="primary" className="" >
                         <PhoneIcon style = {{color: '#333', fontSize: 25}}/> 
                         <Typography noWrap style = {{color: '#000'}}>Phone Number</Typography> 
                 </Button>
             </div>
             <div>
-                <Button variant="outlined" className="listingform__button listingform__button--primary" >
-                        <img  src={GoogleIcon} class="w-10 inline mr-4"/> 
+                <Button variant="outlined"  color="primary" className="listingform__button listingform__button--primary" >
+                        <img  src={GoogleIcon} class="w-10 inline mr-2"/> 
                         <Typography noWrap style = {{color: '#000'}}>Google</Typography> 
                 </Button>
             </div>
             <div>
-                <Button variant="outlined" className="listingform__button listingform__button--primary" >
-                        <FacebookIcon style = {{color: '#000', fontSize: 25}}/> 
-                        <Typography noWrap style = {{color: '#fff'}}>Facebook</Typography> 
+                <Button variant="outlined"  color="primary" className="listingform__button listingform__button--primary" >
+                        <FacebookIcon style = {{color: 'blue', fontSize: 25}}/> 
+                        <Typography noWrap style = {{color: '#333'}}>Facebook</Typography> 
                 </Button>
             </div>
         </div>
+        <div className="signup text-xl" onClick={handleClose}>
+            Don't have an account? <Link className="auth__authtext__link" to='/signup'>Sign Up</Link>
+        </div>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
       </Dialog>
     )
 
