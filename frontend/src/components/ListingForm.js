@@ -12,6 +12,10 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField'
 import People from '@material-ui/icons/PersonOutlined';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Card from '@material-ui/core/Card';
+import Image1 from '../assets/images/image.png'
 
 function ListingForm(props) {
 
@@ -126,11 +130,66 @@ function ListingForm(props) {
             </div>
             </form>
 
-            <section className="Covid">
+            <section className="Covid my-10">
                 <div className="row flex justify-center">
-                    <Paper elevation={0} className="px-4 pb-2 border-yellow-500 border-2 border-l-4 w-full" >
-                        Some Covid 19 tips
+                    <Paper elevation={0} className="px-4 pb-2 border-yellow-500 border-2 border-l-4 w-2/3" >
+                        <div class="text-lg font-bold">COVID 19</div>
+                        <div> It is important to stay safe during these difficult and unpredictable times</div>
+                        <div class="text-blue-500"> <a href="">Click here to learn more about how to stay safe</a></div>
                     </Paper>
+                </div>
+            </section>
+
+            <section className="resources my-10">
+                <div className="row">
+                    <h1 class="text-6xl text-grey-100">Support and Resources</h1>
+                </div>
+                <div className="row form__carousel">
+                    <div class="carousel relative shadow-2xl bg-white">
+                        <div class="carousel-inner relative overflow-hidden w-full">
+                            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="true" checked="checked" />
+                            <div class="carousel-item absolute opacity-0 h-64" >
+                                <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center mx-auto flex flex-row justify-center">
+                                    <Card raised className="w-56">
+                                        <CardMedia
+                                            className="w-56"
+                                            image={Image1}
+                                            title="Paella dish"
+                                        />
+                                        <CardContent>Slaps</CardContent>
+                                    </Card>
+                                </div>
+                            </div>
+                            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                            
+                            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="true" />
+                            <div class="carousel-item absolute opacity-0 h-64" >
+                                <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div>
+                            </div>
+                            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+                            
+                            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="true" />
+                            <div class="carousel-item absolute opacity-0 h-64" >
+                                <div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+                            </div>
+                            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                            <ol class="carousel-indicators">
+                                <li class="inline-block mr-3">
+                                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                                </li>
+                                <li class="inline-block mr-3">
+                                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                                </li>
+                                <li class="inline-block mr-3">
+                                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                                </li>
+                            </ol>
+                        </div>                            
+                    </div>
                 </div>
             </section>
             <form onSubmit={onSubmit} className="lisitingform">
