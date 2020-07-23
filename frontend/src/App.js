@@ -27,8 +27,9 @@ function App() {
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About} />
               <Route exact path='/contact' component={Contact} />
-              <Route exact path='/listings' component={Listings} />
-              <Route exact path='/listings/:id' component={ListingDetail} />
+              <Route exact path='/shelters' component={Listings} />
+              <Route exact path='/shelters/:id' component={ListingDetail} />
+			  <Route exact path='/shelters/:id/reservation' component={ReservationCreator} />
               <Route exact path='/login' component={Signin} />
               <Route exact path='/signup' component={Signup} />
               <Route component={NotFound} />

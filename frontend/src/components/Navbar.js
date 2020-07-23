@@ -44,8 +44,8 @@ function Navbar({auth: {isAuthenticated, loading}, logOut}) {
                         </NavLink>
                     </li>
                     <li className="navbar__bottom__item">
-                        <NavLink className="navbar__bottom__item__link" exact to='/listings'>
-                            Listings
+                        <NavLink className="navbar__bottom__item__link" exact to='/shelters'>
+                            Shelters
                         </NavLink>
                     </li>
                     <li className="navbar__bottom__item">

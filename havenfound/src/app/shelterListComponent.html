@@ -1,0 +1,27 @@
+<div class="card my-5">
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Shelter Name</th>
+                <th scope="col">Beds Remaining</th>
+                <th scope="col">Description</th>
+                <th scope="col"> Shelter Details </th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let shelter of shelters">
+                <td>{{ shelter.shelterName }}</td>
+                <td>{{ shelter.capacity }}</td>
+                <td>{{ shelter.description }}</td>
+                <td>
+                  <a routerLink="/shelters" class="btn btn-info">Shelter Details</a>
+                </td>
+
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
